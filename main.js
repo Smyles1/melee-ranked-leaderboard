@@ -20,7 +20,7 @@ function getPlayerData(cc) {
     }
   }
   `;
-  const endpoint = 'https://gql-gateway-dot-slippi.uc.r.appspot.com/graphql'; // Fizzi's ranked database
+  const endpoint = ''; // ranked database
   const variables = { cc: cc };
   const payload = {
     query: query,
@@ -96,7 +96,7 @@ function getRank(elo) {
 
 
 function refreshAnswers() {
-  var form = FormApp.openById('1arzpcL-GZOmrhIulIjF-HOISJgA6GJ2NkjkWxFFEHps');
+  var form = FormApp.openById('');
   var formResponses = form.getResponses();
   var temptags = [];
   for (var i = 0; i < formResponses.length; i++) {
@@ -218,7 +218,7 @@ function createEmbed(){
 
   fields.push({
             "name": '\u200b',
-            "value": '[Full ranks](https://docs.google.com/spreadsheets/d/1TsUskCP3-Pt30JN80uTetvouQgdTVQ70Wub5Mjr1gvQ/edit?usp=sharing), [Form](https://forms.gle/X15WavPVD1kURK8z5)',
+            "value": '',
             "inline": false
   });
 
@@ -229,7 +229,7 @@ function createEmbed(){
     "method": "post",
     "payload": JSON.stringify({
       "username": "Ranking bot :)",
-      "avatar_url": "https://cdn.discordapp.com/attachments/1056745720440430602/1056749170423234620/0a3d669957a6d01feaf35a5fcc5ad945.png",
+      "avatar_url": "",
       "embeds": [{
         "author":{
           "name": "Ranks for Yoshicord",
@@ -248,7 +248,7 @@ function createEmbed(){
 function sendDisc(){
   var storage = PropertiesService.getScriptProperties();
 
-  var discordUrl = 'https://discord.com/api/webhooks/1062932015525150840/-V41YaYQSd_7wR3eQ4Hctl24Ulv9D0cM9R-Q0aUeMeD-AfCsJzPGw1RxlB64q_juQ6ZT';
+  var discordUrl = '';
 
   const embedOptions = PropertiesService.getScriptProperties();
   // var maxlength = ranks.length;
